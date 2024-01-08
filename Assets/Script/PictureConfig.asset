@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af9c5246500bf34aa4467c5a5c93373, type: 3}
+  m_Name: PictureConfig
+  m_EditorClassIdentifier: 
+  listFood:
+  - {fileID: 21300000, guid: c28e6311520c91347b79cfdf406bb463, type: 3}
+  - {fileID: 21300000, guid: d31ae90d48d89144798863c47c7d7f28, type: 3}
+  - {fileID: 21300000, guid: 01a949de1cb99cb498656698a726ed31, type: 3}
+  - {fileID: 21300000, guid: 897a9cdea6197f144b49c1ec460522bb, type: 3}
+  - {fileID: 21300000, guid: dad6af208b6d6ae43bf0aa440ea3c462, type: 3}
+  - {fileID: 21300000, guid: 202abd2d65b94da43b6b9d7bc76e32f3, type: 3}
+  - {fileID: 21300000, guid: 5992defce8f89ef44ae782f8fdadba9f, type: 3}
+  - {fileID: 21300000, guid: e77afcad9e8d8004da4ec83882264788, type: 3}
+  - {fileID: 21300000, guid: 0d2879c41d051d345b5eed67b38d4b2b, type: 3}
+  - {fileID: 21300000, guid: 3d39ab964f652ec449581e2c5903f97f, type: 3}
+  - {fileID: 21300000, guid: 8ae6c9685c5a01b4e9258cf4cf179553, type: 3}
+  listAnimal: []
+  listFruit: []
