@@ -25,8 +25,8 @@ public class Picture : MonoBehaviour
     {
         Debug.LogError("wtfff");
         MenuController.instance.OnPreGame();
-        PictureManager.instance.chosenPictureOrder = order;
+        DataController.CURRENT_PICTURE = order;
         PreparePanel.instance.image.sprite =
-            MenuController.instance.pictureConfig.listFood[PictureManager.instance.chosenPictureOrder];
+            MenuController.instance.pictureConfig.listFood[DataController.CURRENT_PICTURE];
     }
 }

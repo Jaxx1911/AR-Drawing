@@ -1,17 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public ImageController image;
+    public ImageController imageControl;
     public ChangeStateButton lockPos, hideImage;
-    public bool isLock, isHide;
+    public bool isLock, isHide, isFlip;
     private RectTransform originalTranform;
+    
     public Slider scale, blur;
+    public GameObject UpBar, LowBar, MainImage;
+    
     private void Awake()
     {
         if (instance == null)
@@ -23,19 +29,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isLock = lockPos.state;
-        isHide = hideImage.state;
-        scale.value = 0.5f;
-        blur.value = 0.5f;
-        originalTranform = image.rectTransform;
+        Init();
+        StartWebCam();
+        ImageDefaultSetting();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var color = image.image.color;
+        var color = imageControl.image.color;
         color.a = blur.value;
-        image.image.color = color;
+        imageControl.image.color = color;
 
         ValueToScale();
     }
@@ -43,28 +47,61 @@ public class GameManager : MonoBehaviour
     void ValueToScale()
     {
         float percent = scale.value / 0.5f;
-        Vector3 vector3 = image.rectTransform.localScale;
-        vector3.x = percent;
+        Vector3 vector3 = imageControl.rectTransform.localScale;
+        vector3.x = percent * (isFlip ? -1 : 1);
         vector3.y = percent;
 
-        image.rectTransform.localScale = vector3;
+        imageControl.rectTransform.localScale = vector3;
     }
     
     public void OnFlip()
     {
-        Vector3 vector3 = image.rectTransform.localScale;
+        isFlip = !isFlip;
+        var vector3 = imageControl.rectTransform.localScale;
         vector3.x *= -1;
-        image.rectTransform.localScale = vector3;
+        imageControl.rectTransform.localScale = vector3;
     }
 
     public void OnHide()
     {
         isHide = !isHide;
-        image.gameObject.SetActive(!isHide);
+        imageControl.gameObject.SetActive(!isHide);
     }
 
     public void OnLock()
     {
         isLock = !isLock;
+    }
+
+    private void Init()
+    {
+        imageControl.image.sprite = MenuController.instance.pictureConfig.listFood[DataController.CURRENT_PICTURE];
+        imageControl.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
+        UpBar.gameObject.transform.DOLocalMove(new Vector3(0, 870, 0), 0.2f);
+        LowBar.gameObject.transform.DOLocalMove(new Vector3(0, -800, 0), 0.2f);
+    }
+
+    public async void BackHome()
+    {
+        imageControl.transform.DOLocalMove(new Vector3(1080, imageControl.transform.position.y, 0), 0.2f);
+        UpBar.gameObject.transform.DOLocalMove(new Vector3(1080, 870, 0), 0.2f);
+        LowBar.gameObject.transform.DOLocalMove(new Vector3(1080, -800, 0), 0.2f);
+        await Task.Delay(100);
+        SceneManager.LoadSceneAsync("Menu");
+    }
+
+    private void StartWebCam()
+    {
+        if(DataController.CAMERA_ON) WebCam.instance.StartCam();
+    }
+
+    private void ImageDefaultSetting()
+    {
+        Debug.LogError("???");
+        isLock = lockPos.state;
+        isHide = hideImage.state;
+        scale.value = 0.5f;
+        blur.value = 0.5f;
+        originalTranform = imageControl.rectTransform;
     }
 }

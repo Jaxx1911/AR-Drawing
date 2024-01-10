@@ -44,18 +44,18 @@ public class MenuController : MonoBehaviour
     public void OnSettingButtonClick()
     {
         settingsPanel.SetActive(true);
-        settingsPanel.transform.DOMove(new Vector3(540, 960, 0), 0.2f);
+        settingsPanel.transform.DOLocalMove(new Vector3(0, 0, 10), 0.2f);
     }
 
     public void OnSelectPictureButtonClick()
     {
         selectPicturePanel.SetActive(true);
-        selectPicturePanel.transform.DOMove(new Vector3(540, 960, 0), 0.2f);
+        selectPicturePanel.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
     }
 
     public void OnPreGame()
     {
         preparePanel.SetActive(true);
-        preparePanel.transform.DOMove(new Vector3(540, 960, 0), 0.2f);
+        preparePanel.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
     }
 }

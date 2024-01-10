@@ -20,9 +20,9 @@ public class SettingPanel : MonoBehaviour
     
     public async void BackMenu()
     {
-        gameObject.transform.DOMove(new Vector3(1620, 960, 0), 0.5f);
+        gameObject.transform.DOLocalMove(new Vector3(1080, 0, 0), 0.2f);
 
-        await Task.Delay(500);
+        await Task.Delay(200);
         
         gameObject.SetActive(false);
     }
