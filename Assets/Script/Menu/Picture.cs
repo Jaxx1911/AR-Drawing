@@ -27,6 +27,6 @@ public class Picture : MonoBehaviour
         MenuController.instance.OnPreGame();
         DataController.CURRENT_PICTURE = order;
         PreparePanel.instance.image.sprite =
-            MenuController.instance.pictureConfig.listFood[DataController.CURRENT_PICTURE];
+            MenuController.instance.pictureConfig.list[DataController.CURRENT_PICTURE];
     }
 }

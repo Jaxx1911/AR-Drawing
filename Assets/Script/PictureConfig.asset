@@ -12,17 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af9c5246500bf34aa4467c5a5c93373, type: 3}
   m_Name: PictureConfig
   m_EditorClassIdentifier: 
-  listFood:
-  - {fileID: 21300000, guid: c28e6311520c91347b79cfdf406bb463, type: 3}
-  - {fileID: 21300000, guid: d31ae90d48d89144798863c47c7d7f28, type: 3}
-  - {fileID: 21300000, guid: 01a949de1cb99cb498656698a726ed31, type: 3}
-  - {fileID: 21300000, guid: 897a9cdea6197f144b49c1ec460522bb, type: 3}
-  - {fileID: 21300000, guid: dad6af208b6d6ae43bf0aa440ea3c462, type: 3}
-  - {fileID: 21300000, guid: 202abd2d65b94da43b6b9d7bc76e32f3, type: 3}
-  - {fileID: 21300000, guid: 5992defce8f89ef44ae782f8fdadba9f, type: 3}
-  - {fileID: 21300000, guid: e77afcad9e8d8004da4ec83882264788, type: 3}
-  - {fileID: 21300000, guid: 0d2879c41d051d345b5eed67b38d4b2b, type: 3}
-  - {fileID: 21300000, guid: 3d39ab964f652ec449581e2c5903f97f, type: 3}
-  - {fileID: 21300000, guid: 8ae6c9685c5a01b4e9258cf4cf179553, type: 3}
+  list:
+  - {fileID: 21300000, guid: de924ff76ec698b419e49d120fc58b5c, type: 3}
+  - {fileID: 21300000, guid: 1e149d7aa6c1cd84a8acda91bae1fb5c, type: 3}
+  - {fileID: 21300000, guid: ee705959ff3f5994ea32f17c365c069f, type: 3}
+  - {fileID: 21300000, guid: 829cbbd0978c99c47b516a2933f8cbf6, type: 3}
+  - {fileID: 21300000, guid: 43058b7f93ab91b43a6b04df4a385d24, type: 3}
+  - {fileID: 21300000, guid: 4359bb61b1122914d8fbb76a66d0b5df, type: 3}
+  - {fileID: 21300000, guid: 586250309bf2ccc4d90ee19a29a61a32, type: 3}
+  - {fileID: 21300000, guid: 773e0c79718e39e4c9de2d626266d1c9, type: 3}
+  - {fileID: 21300000, guid: a8007a916b0c187409cd420323d6606b, type: 3}
+  - {fileID: 21300000, guid: 80e496c486a3ca749b724a63d5e3f7d0, type: 3}
+  - {fileID: 21300000, guid: 6be5de3981008ca469e8616cec02bfcb, type: 3}
+  - {fileID: 21300000, guid: b0873d1718380ca428a1e07bb9aab9cc, type: 3}
+  - {fileID: 21300000, guid: 81c25b80b408e2240bd7c925d4fbf9ea, type: 3}
+  - {fileID: 21300000, guid: 709d2513fef1bf84ebe134d540c91714, type: 3}
+  - {fileID: 21300000, guid: f2798a47881bf6e458ac10521f8ce05f, type: 3}
+  - {fileID: 21300000, guid: 5bf1929fe3bf48d419988fa6a566aea3, type: 3}
+  - {fileID: 21300000, guid: b5e2e322c0137e74a99d59cb37f5e516, type: 3}
+  - {fileID: 21300000, guid: d34ccc1af12ff1f4eac9532b6b75142e, type: 3}
+  - {fileID: 21300000, guid: 6c26ec7aa154b1245b78ebe2ca7b32ac, type: 3}
+  - {fileID: 21300000, guid: a7bbe7250a2a46e4f928f70b19c9e808, type: 3}
+  - {fileID: 21300000, guid: e12c863a56106d648b3dac1f4348c287, type: 3}
+  - {fileID: 21300000, guid: 38f91bf6f99ae8340af7a459cac7eb5b, type: 3}
+  - {fileID: 21300000, guid: a9b2c2448d0b1b0439b004f2c1af3a80, type: 3}
+  - {fileID: 21300000, guid: b4e8776c9f4846e4ea13b2ef3790c608, type: 3}
+  - {fileID: 21300000, guid: f60e968717108b34f8d6694d540faf56, type: 3}
+  listFood: []
   listAnimal: []
   listFruit: []

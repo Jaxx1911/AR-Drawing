@@ -24,10 +24,10 @@ public class PictureManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < MenuController.instance.pictureConfig.listFood.Count; i++)
+        for (int i = 0; i < MenuController.instance.pictureConfig.list.Count; i++)
         {
             picture.order = i;
-            picture.image.sprite = MenuController.instance.pictureConfig.listFood[i];
+            picture.image.sprite = MenuController.instance.pictureConfig.list[i];
             Instantiate(picture, parent.transform);
             
         }

@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     private void Init()
     {
-        imageControl.image.sprite = MenuController.instance.pictureConfig.listFood[DataController.CURRENT_PICTURE];
+        imageControl.image.sprite = MenuController.instance.pictureConfig.list[DataController.CURRENT_PICTURE];
         imageControl.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
         UpBar.gameObject.transform.DOLocalMove(new Vector3(0, 870, 0), 0.2f);
         LowBar.gameObject.transform.DOLocalMove(new Vector3(0, -800, 0), 0.2f);
