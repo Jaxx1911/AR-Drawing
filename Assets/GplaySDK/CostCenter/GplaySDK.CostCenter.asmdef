@@ -1,0 +1,21 @@
+{
+    "name": "GplaySDK.CostCenter",
+    "rootNamespace": "GplaySDK.CostCenter",
+    "references": [
+        "GUID:a6a31658147f44ac82fdee4486f1fe64",
+        "GUID:70859fa8528543608f3f806e13c21198",
+        "GUID:00c479e63b1c74419820a39073267645",
+        "GUID:66731ab186ba4d6b80493cc2a8fd5bc0",
+        "GUID:6dbab56e97a346a6a51f1f108904e2e1",
+        "GUID:4d86cc7fbeb8472684cb42079c6464ff"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

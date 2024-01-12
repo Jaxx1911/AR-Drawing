@@ -46,7 +46,7 @@ public class PreparePanel : MonoBehaviour
      {
          gameObject.transform.DOLocalMove(new Vector3(-1080, 0, 0), 0.2f);
          await Task.Delay(200);
-         DataController.CAMERA_ON = false;
+         //DataController.CAMERA_ON = false;
          SceneManager.LoadSceneAsync("Main");
     }
 
@@ -54,7 +54,7 @@ public class PreparePanel : MonoBehaviour
      {
          gameObject.transform.DOLocalMove(new Vector3(-1080, 0, 0), 0.2f);
          await Task.Delay(200);
-         DataController.CAMERA_ON = true;
+         //DataController.CAMERA_ON = true;
          SceneManager.LoadSceneAsync("Camera");
      }
 }

@@ -33,6 +33,8 @@ public class WebCam : MonoBehaviour
 
     public void StartCam()
     {
+        var color = new Color(255, 255, 255);
+        camDisplay.color = color;
         if (tex != null)
         {
             camDisplay.texture = null;

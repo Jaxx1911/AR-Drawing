@@ -11,8 +11,7 @@ public class DataController : MonoBehaviour
     }
 
     public static int CURRENT_PICTURE;
-
-    public static bool CAMERA_ON;
+    
     // Start is called before the first frame update
     void Start()
     {

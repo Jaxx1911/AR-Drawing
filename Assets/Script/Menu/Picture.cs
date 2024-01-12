@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using GplaySDK.Ads;
+using Script;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,10 +25,11 @@ public class Picture : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.LogError("wtfff");
-        MenuController.instance.OnPreGame();
-        DataController.CURRENT_PICTURE = order;
-        PreparePanel.instance.image.sprite =
-            MenuController.instance.pictureConfig.list[DataController.CURRENT_PICTURE];
+        AdsController.ShowInterstitial(() =>
+        {
+            DataController.CURRENT_PICTURE = order;
+            MenuController.instance.OnGame();
+        },StringConst.LocalKey.StringAds.PICK_PICTURE,false);
+        
     }
 }

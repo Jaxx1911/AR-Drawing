@@ -1,0 +1,17 @@
+{
+    "name": "GplaySDK.MediationIntegration.BaseLib",
+    "rootNamespace": "GplaySDK.MediationIntegration.BaseLib",
+    "references": [
+        "Sirenix.OdinInspector.Modules.UnityMathematics",
+        "GplaySDK.Core.BaseLib"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

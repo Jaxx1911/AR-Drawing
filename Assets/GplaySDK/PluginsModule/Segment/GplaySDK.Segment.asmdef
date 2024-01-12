@@ -1,0 +1,17 @@
+{
+    "name": "GplaySDK.Segment",
+    "rootNamespace": "GplaySDK.Segment",
+    "references": [
+        "GplaySDK.Core.BaseLib",
+        "GplaySDK.RemoteConfig"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

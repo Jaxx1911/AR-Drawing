@@ -1,0 +1,21 @@
+{
+    "name": "GplaySDK.MediationIntegration.BaseLib.Editor",
+    "rootNamespace": "GplaySDK.MediationIntegration.BaseLib.Editor",
+    "references": [
+        "Sirenix.OdinInspector.Modules.UnityMathematics",
+        "GplaySDK.Core.BaseLib",
+        "GplaySDK.Core.Editor.BaseLib",
+        "GplaySDK.MediationIntegration.BaseLib"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "GplaySDK.Network",
+    "rootNamespace": "GplaySDK.Network",
+    "references": [
+        "GplaySDK.Core.BaseLib"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

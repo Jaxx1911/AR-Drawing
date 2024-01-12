@@ -1,0 +1,19 @@
+{
+  "name": "GplaySDK.MaxIntegration",
+  "rootNamespace": "GplaySDK.MaxIntegration",
+  "references": [
+    "GplaySDK.Core.BaseLib",
+    "GplaySDK.MediationIntegration.BaseLib",
+    "MaxSdk.Scripts",
+    "GplaySDK.LocalServer"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [ ],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

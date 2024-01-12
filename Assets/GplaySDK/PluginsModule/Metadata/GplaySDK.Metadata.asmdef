@@ -1,0 +1,20 @@
+{
+    "name": "GplaySDK.Metadata",
+    "rootNamespace": "GplaySDK.Metadata",
+    "references": [
+        "GplaySDK.Core",
+        "GplaySDK.Core.BaseLib",
+        "GplaySDK.Network"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

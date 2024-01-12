@@ -1,0 +1,18 @@
+{
+    "name": "GplaySDK.ForceUpdate",
+    "rootNamespace": "GplaySDK.ForceUpdate",
+    "references": [
+        "GplaySDK.Core.BaseLib",
+        "GplaySDK.RemoteConfig",
+        "GplaySDK.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

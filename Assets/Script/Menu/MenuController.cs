@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using GplaySDK.Ads;
+using Script;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
@@ -53,9 +56,16 @@ public class MenuController : MonoBehaviour
         selectPicturePanel.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
     }
 
-    public void OnPreGame()
+    public void OnGame()
     {
-        preparePanel.SetActive(true);
-        preparePanel.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
+        SceneManager.LoadSceneAsync("Camera");
+    }
+    public void ShowTutorialBanner()
+    {
+        //show Banner
+        AdsController.ShowInterstitial(() =>
+        {
+            
+        },StringConst.LocalKey.StringAds.SHOW_TUTORIAL,false);
     }
 }

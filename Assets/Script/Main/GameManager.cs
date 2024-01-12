@@ -1,8 +1,10 @@
-using System;
+    using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DG.Tweening;
+using GplaySDK.Ads;
+using Script;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,12 +13,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public ImageController imageControl;
-    public ChangeStateButton lockPos, hideImage;
-    public bool isLock, isHide, isFlip;
-    private RectTransform originalTranform;
     
-    public Slider scale, blur;
+    private RectTransform originalTranform;
+    public bool isHideLowerNavBar;
+    public Slider blur;
     public GameObject UpBar, LowBar, MainImage;
+    public RectTransform cameraPanel;
     
     private void Awake()
     {
@@ -30,8 +32,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Init();
-        StartWebCam();
         ImageDefaultSetting();
+        StartWebCam();
     }
 
     // Update is called once per frame
@@ -40,68 +42,51 @@ public class GameManager : MonoBehaviour
         var color = imageControl.image.color;
         color.a = blur.value;
         imageControl.image.color = color;
-
-        ValueToScale();
-    }
-
-    void ValueToScale()
-    {
-        float percent = scale.value / 0.5f;
-        Vector3 vector3 = imageControl.rectTransform.localScale;
-        vector3.x = percent * (isFlip ? -1 : 1);
-        vector3.y = percent;
-
-        imageControl.rectTransform.localScale = vector3;
-    }
-    
-    public void OnFlip()
-    {
-        isFlip = !isFlip;
-        var vector3 = imageControl.rectTransform.localScale;
-        vector3.x *= -1;
-        imageControl.rectTransform.localScale = vector3;
-    }
-
-    public void OnHide()
-    {
-        isHide = !isHide;
-        imageControl.gameObject.SetActive(!isHide);
-    }
-
-    public void OnLock()
-    {
-        isLock = !isLock;
     }
 
     private void Init()
     {
+        isHideLowerNavBar = true;
+        //cameraPanel.sizeDelta = new Vector2(Display.main.systemHeight , Display.main.systemWidth);
         imageControl.image.sprite = MenuController.instance.pictureConfig.list[DataController.CURRENT_PICTURE];
-        imageControl.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
+        /*imageControl.transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
         UpBar.gameObject.transform.DOLocalMove(new Vector3(0, 870, 0), 0.2f);
-        LowBar.gameObject.transform.DOLocalMove(new Vector3(0, -800, 0), 0.2f);
+        LowBar.gameObject.transform.DOLocalMove(new Vector3(0, -800, 0), 0.2f);*/
     }
 
-    public async void BackHome()
+    public void BackHome()
     {
-        imageControl.transform.DOLocalMove(new Vector3(1080, imageControl.transform.position.y, 0), 0.2f);
-        UpBar.gameObject.transform.DOLocalMove(new Vector3(1080, 870, 0), 0.2f);
-        LowBar.gameObject.transform.DOLocalMove(new Vector3(1080, -800, 0), 0.2f);
-        await Task.Delay(100);
-        SceneManager.LoadSceneAsync("Menu");
+        AdsController.ShowInterstitial(() =>
+        {
+            SceneManager.LoadSceneAsync("Menu");
+        },StringConst.LocalKey.StringAds.BACK_HOME,false);
+        
     }
 
     private void StartWebCam()
-    {
-        if(DataController.CAMERA_ON) WebCam.instance.StartCam();
+    { 
+        WebCam.instance.StartCam();
     }
 
     private void ImageDefaultSetting()
     {
         Debug.LogError("???");
-        isLock = lockPos.state;
-        isHide = hideImage.state;
-        scale.value = 0.5f;
-        blur.value = 0.5f;
+        blur.value = 1f;
         originalTranform = imageControl.rectTransform;
+    }
+
+    public void OnHideLowerNavBar()
+    {
+        isHideLowerNavBar = !isHideLowerNavBar;
+        LowBar.SetActive(isHideLowerNavBar);
+    }
+
+    public void ShowTutorialBanner()
+    {
+        //show Banner
+        AdsController.ShowInterstitial(() =>
+        {
+            
+        },StringConst.LocalKey.StringAds.SHOW_TUTORIAL,false);
     }
 }

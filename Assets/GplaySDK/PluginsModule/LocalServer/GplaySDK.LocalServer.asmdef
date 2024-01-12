@@ -1,0 +1,19 @@
+{
+    "name": "GplaySDK.LocalServer",
+    "rootNamespace": "GplaySDK.LocalServer",
+    "references": [
+        "GplaySDK.Core.BaseLib",
+        "GplaySDK.Network"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

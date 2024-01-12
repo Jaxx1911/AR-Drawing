@@ -1,0 +1,20 @@
+{
+  "name": "GplaySDK.Core",
+  "rootNamespace": "GplaySDK.Core",
+  "references": [
+    "GplaySDK.Core.BaseLib",
+    "GplaySDK.MediationIntegration.BaseLib",
+    "GplaySDK.AdmobIntegration",
+    "GplaySDK.MaxIntegration",
+    "GplaySDK.LocalServer"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,20 @@
+{
+    "name": "GplaySDK.Core.Editor",
+    "rootNamespace": "GplaySDK.Core.Editor",
+    "references": [
+        "GplaySDK.Core.BaseLib",
+        "GplaySDK.Core.Editor.BaseLib",
+        "GplaySDK.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
