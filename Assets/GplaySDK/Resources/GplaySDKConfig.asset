@@ -46,3 +46,5 @@ MonoBehaviour:
   iapAndroidKeyHash: hash
   baseLibConfig: {fileID: 11400000, guid: 4520c81133fbe9646b510fa27f6efc04, type: 2}
   baseAdsConfig: {fileID: 11400000, guid: e48c970cfe7a29341abceee221651e09, type: 2}
+  adMobConfig: {fileID: 0}
+  maxConfig: {fileID: 0}

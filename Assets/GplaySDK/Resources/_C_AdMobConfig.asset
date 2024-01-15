@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4801fe7e19498f871e29defa7c2d21, type: 3}
-  m_Name: _C_BaseLibConfig
+  m_Script: {fileID: 11500000, guid: 6463f7afde294f2bbeeb80ee4e021ad0, type: 3}
+  m_Name: _C_AdMobConfig
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,13 +21,17 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  gplaySDK_Version: 0.0.1
-  projectSdkAliasIdAndroid: 
-  projectSdkAliasIdIOS: 
-  gplaySDK_DebugMode: 0
-  gplaySDK_LogLowLevel: 0
-  asyncInterval: 500
-  threadCatchUpSingleFrameCommand: 10
-  skipRequireProperty: 0
-  gitBranch: main
-  gitCommitId: 25e1ce1f42ffe1020511a39e9c392bd56d93dc0e
+  appId_Android: 
+  appId_IOS: 
+  auto_OpenAppIdAndroid: 
+  auto_OpenAppIdIOS: 
+  auto_NativeAdsIdAndroid: 
+  auto_NativeAdsIdIOS: 
+  auto_BannerAdsIdAndroid: 
+  auto_BannerAdsIdIOS: 
+  auto_InterstitialAdsIdAndroid: 
+  auto_InterstitialAdsIdIOS: 
+  auto_RewardedVideoAdsIdAndroid: 
+  auto_RewardedVideoAdsIdIOS: 
+  useCollapsedBanner: 1
+  useAsSubMediation: 1

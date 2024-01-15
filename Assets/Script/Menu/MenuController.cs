@@ -25,7 +25,7 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AdsController.ShowBanner();
     }
 
     // Update is called once per frame
@@ -58,11 +58,14 @@ public class MenuController : MonoBehaviour
 
     public void OnGame()
     {
-        SceneManager.LoadSceneAsync("Camera");
+        AdsController.ShowInterstitial(() =>
+        {
+            SceneManager.LoadSceneAsync("Camera");
+        },StringConst.LocalKey.StringAds.LOAD_PICTURE,false);
     }
     public void ShowTutorialBanner()
     {
-        //show Banner
+        //show BannerTutor
         AdsController.ShowInterstitial(() =>
         {
             

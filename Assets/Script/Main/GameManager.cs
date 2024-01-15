@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowTutorialBanner()
     {
-        //show Banner
+        //show BannerTuTor
         AdsController.ShowInterstitial(() =>
         {
             
